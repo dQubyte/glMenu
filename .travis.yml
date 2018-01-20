@@ -2,6 +2,8 @@ sudo: false
 addons:
   apt_packages:
     - xorg-dev
+    - libglfw3
+    - libglfw3-dev
 language: go
 go:
   - 1.9
