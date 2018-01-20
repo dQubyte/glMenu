@@ -14,7 +14,7 @@ matrix:
 install:
   - go get -d -t ./...
   - go get github.com/mattn/goveralls
-  - git clone https://github.com/glfw/glfw && mkdir build && cd build && cmake ../glfw && make -j4 && sudo make install
+  - git clone https://github.com/glfw/glfw && mkdir build && cd build && cmake ../glfw && make -j4 && sudo make install && cd ..
 script:
   - go test
   - cd example/
