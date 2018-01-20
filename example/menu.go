@@ -30,7 +30,7 @@ func MenuInit(window *glfw.Window, font *glText.Font) {
 		fmt.Println("error loading the font")
 		os.Exit(1)
 	}
-	textbox := mainMenu.NewTextBox("127.0.0.1", 250, 40, 1)
+	textbox := mainMenu.NewTextBox("Player", 250, 40, 1)
 	textbox.Text.MaxRuneCount = 16
 	mainMenu.NewLabel("Options", glMenu.LabelConfig{Action: glMenu.GOTO_MENU, Goto: "option"})
 	mainMenu.NewLabel("Disabled", glMenu.LabelConfig{Action: glMenu.NOOP})
