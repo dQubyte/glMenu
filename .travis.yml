@@ -1,0 +1,20 @@
+sudo: false
+addons:
+  apt_packages:
+    - xorg-dev
+language: go
+go:
+  - 1.9
+  - tip
+  - master
+matrix:
+  allow_failures:
+    - go: master
+  fast_finish: true
+install:
+  - go get -d -t ./...
+  - go get github.com/mattn/goveralls
+script:
+  - go test
+  - go build -o ./example/app ./example/main.go
+  - $GOPATH/bin/goveralls -service=travis-ci
